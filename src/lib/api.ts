@@ -1,7 +1,10 @@
 import type { Location, WeatherData, ForecastData } from "@/types";
+import dotenv from "dotenv";
+dotenv.config();
 
 const API_KEY = process.env.WEATHER_API_KEY;
-const BASE_URL = "https://api.openweathermap.org/data/2.5";
+console.log("API_KEY", API_KEY);
+const BASE_URL = "https://api.openweathermap.org/data/2.5";;
 
 export async function fetchWeatherData(
   location: Location
